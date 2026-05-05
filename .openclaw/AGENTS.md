@@ -1,4 +1,4 @@
-# MovieClaw Agent Rules
+# CineMatch Agent Rules
 
 ## Allowed Actions
 - Search for movie information using LLM knowledge

@@ -1,18 +1,18 @@
-# 🎬 MovieClaw — AI Movie Vibe Recommender
+# 🎬 CineMatch — AI Movie Vibe Recommender
 
 > **Tell me a movie you loved. I'll find movies that feel the same way.**
 
-MovieClaw is an AI-powered Telegram bot that recommends movies based on **vibes** — not just genres. It understands the mood, tone, pacing, and emotional impact of movies to find ones that recreate the same experience.
+CineMatch is an AI-powered Telegram bot that recommends movies based on **vibes** — not just genres. It understands the mood, tone, pacing, and emotional impact of movies to find ones that recreate the same experience.
 
 Built with [OpenClaw](https://openclaw.ai) for the **Clash of the Claws** hackathon (PRISM, SRI-B) — Theme 2: Daily Utility.
 
 ---
 
-## ✨ What Makes MovieClaw Different?
+## ✨ What Makes CineMatch Different?
 
-Most movie recommenders match by genre or ratings. MovieClaw matches by **feelings**.
+Most movie recommenders match by genre or ratings. CineMatch matches by **feelings**.
 
-| Traditional Recommender | MovieClaw |
+| Traditional Recommender | CineMatch |
 |---|---|
 | "You liked Interstellar → here are more sci-fi movies" | "You liked Interstellar → here are movies with the same cosmic awe + emotional father-daughter story" |
 | Genre-based matching | Vibe-based matching (mood, tone, pacing, visual style, emotional impact) |
@@ -24,20 +24,20 @@ Most movie recommenders match by genre or ratings. MovieClaw matches by **feelin
 ## 🚀 How It Works
 
 ### Step 1: Send a Movie Name
-Message MovieClaw on Telegram with any movie you enjoyed.
+Message CineMatch on Telegram with any movie you enjoyed.
 
 ### Step 2: Get Vibe-Matched Recommendations
-MovieClaw analyzes the movie's vibe across 5 dimensions and recommends 5 movies that recreate the same experience.
+CineMatch analyzes the movie's vibe across 5 dimensions and recommends 5 movies that recreate the same experience.
 
 ### Step 3: Refine Your Taste
-Tell MovieClaw what you specifically loved — it remembers and personalizes future recommendations.
+Tell CineMatch what you specifically loved — it remembers and personalizes future recommendations.
 
 ### Example Conversation
 
 ```
 You:  "I just watched Interstellar and loved it"
 
-MovieClaw: 🌌 If you loved Interstellar, here are movies with the same vibe:
+CineMatch: 🌌 If you loved Interstellar, here are movies with the same vibe:
 
 1. 🌌 Arrival (2016)
    Same vibe: Mind-bending sci-fi with deep emotional core
@@ -170,7 +170,7 @@ openclaw models set "openrouter/meta-llama/llama-3.3-70b-instruct:free"
 openclaw models fallbacks add "openrouter/google/gemma-3-27b-it:free"
 
 # Add your Telegram bot
-openclaw channels add --channel telegram --token "YOUR_BOT_TOKEN_HERE" --name "MovieClaw Bot"
+openclaw channels add --channel telegram --token "YOUR_BOT_TOKEN_HERE" --name "CineMatch Bot"
 ```
 
 ### Step 6: Start the Bot
@@ -241,7 +241,7 @@ movie-recommender-system/
 
 ## 🧩 How the Vibe Matching Works
 
-When you mention a movie, MovieClaw analyzes it across **5 vibe dimensions**:
+When you mention a movie, CineMatch analyzes it across **5 vibe dimensions**:
 
 | Dimension | Example (Interstellar) |
 |-----------|----------------------|
@@ -277,7 +277,7 @@ It then finds movies that score similarly across these dimensions — not just m
 |--------|------|
 | **Hackathon** | Clash of the Claws (PRISM, SRI-B) |
 | **Theme** | Theme 2 — Daily Utility |
-| **Problem** | Finding the right movie is a daily struggle. Genre-based recommendations miss the point — MovieClaw matches by vibes. |
+| **Problem** | Finding the right movie is a daily struggle. Genre-based recommendations miss the point — CineMatch matches by vibes. |
 | **Team** | Akash S |
 | **Deadline** | May 8, 2026 |
 
