@@ -5,6 +5,7 @@
 - Fetch movie posters using the TMDB API via the fetch_posters.py script
 - Read and update MEMORY.md to track user preferences
 - Send proactive movie suggestions based on HEARTBEAT.md schedule
+- Respond via Telegram (active) and WhatsApp (coming soon)
 - Log daily interactions in the memory/ directory
 
 ## Boundaries
