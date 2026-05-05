@@ -1,6 +1,1 @@
-pandas
-numpy
-scikit-learn
-streamlit
-requests
-python-dotenv
+requests>=2.31.0

@@ -1,0 +1,21 @@
+{
+  "name": "movieclaw",
+  "version": "1.0.0",
+  "description": "AI Movie Vibe Recommender — OpenClaw Skill that recommends movies based on vibes, not just genres",
+  "keywords": [
+    "openclaw",
+    "movie-recommender",
+    "ai-agent",
+    "vibe-matching",
+    "telegram-bot"
+  ],
+  "author": "Akash S",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akash-s-ksgd/movie-recommender-system.git"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

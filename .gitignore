@@ -1,9 +1,24 @@
+# Dependencies
+node_modules/
 __pycache__/
-.env
 *.pyc
-data/movies.csv
-data/ratings.csv
-*.pkl
+
+# Environment
+.env
+env/
+venv/
+.venv/
+
+# OpenClaw runtime
+memory/
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# IDE
 .vscode/
 .idea/
+
+# Build
+*.pkl
