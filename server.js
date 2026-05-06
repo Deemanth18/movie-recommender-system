@@ -20,7 +20,23 @@ app.listen(PORT, () => {
         
         // Ensure free LLM models are selected
         execSync('openclaw models set "openrouter/meta-llama/llama-3.3-70b-instruct:free"', { stdio: 'inherit' });
-        execSync('openclaw models fallbacks add "openrouter/google/gemma-3-27b-it:free"', { stdio: 'inherit' });
+        
+        // Add multiple fallbacks to survive free tier rate limits
+        const fallbacks = [
+            'openrouter/google/gemma-3-27b-it:free',
+            'openrouter/google/gemini-2.0-flash-lite-preview-02-05:free',
+            'openrouter/qwen/qwen-2.5-72b-instruct:free',
+            'openrouter/nvidia/llama-3.1-nemotron-70b-instruct:free',
+            'openrouter/meta-llama/llama-3.1-8b-instruct:free'
+        ];
+        
+        for (const model of fallbacks) {
+            try {
+                execSync(`openclaw models fallbacks add "${model}"`, { stdio: 'inherit' });
+            } catch (e) {
+                // Ignore if it's already added or fails
+            }
+        }
         
         // Connect Telegram bot dynamically
         if (process.env.TELEGRAM_BOT_TOKEN) {
