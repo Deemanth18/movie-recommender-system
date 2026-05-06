@@ -23,11 +23,11 @@ app.listen(PORT, () => {
         
         // Add multiple fallbacks to survive free tier rate limits
         const fallbacks = [
-            'openrouter/google/gemma-3-27b-it:free',
-            'openrouter/google/gemini-2.0-flash-lite-preview-02-05:free',
-            'openrouter/qwen/qwen-2.5-72b-instruct:free',
-            'openrouter/nvidia/llama-3.1-nemotron-70b-instruct:free',
-            'openrouter/meta-llama/llama-3.1-8b-instruct:free'
+            'openrouter/nousresearch/hermes-3-llama-3.1-405b:free',
+            'openrouter/google/gemma-4-31b-it:free',
+            'openrouter/qwen/qwen3-next-80b-a3b-instruct:free',
+            'openrouter/meta-llama/llama-3.2-3b-instruct:free',
+            'openrouter/openai/gpt-oss-120b:free'
         ];
         
         for (const model of fallbacks) {
