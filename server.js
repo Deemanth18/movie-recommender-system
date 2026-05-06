@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const { spawn, execSync } = require('child_process');
 
@@ -28,13 +29,16 @@ app.listen(PORT, () => {
         } else {
             console.warn('WARNING: TELEGRAM_BOT_TOKEN is not set in environment variables.');
         }
+
+        // Disable pairing to make the bot public for everyone
+        execSync('openclaw config set gateway.auth.mode token', { stdio: 'inherit' });
     } catch (error) {
         console.error('Failed to configure OpenClaw:', error.message);
     }
 
-    // Start OpenClaw gateway
+    // Start OpenClaw gateway in foreground
     console.log('Starting OpenClaw gateway...');
-    const openclaw = spawn('openclaw', ['gateway', 'start'], {
+    const openclaw = spawn('openclaw', ['gateway', 'run'], {
         stdio: 'inherit',
         shell: true
     });
