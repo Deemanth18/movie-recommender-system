@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const { spawn, execSync } = require('child_process');
+const { spawn, spawnSync, execSync } = require('child_process');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,6 +18,16 @@ app.listen(PORT, () => {
         console.log('Setting up OpenClaw configuration...');
         execSync('openclaw config set agents.defaults.workspace .', { stdio: 'inherit' });
         
+        if (process.env.OPENROUTER_API_KEY) {
+            console.log('Configuring OpenRouter auth...');
+            spawnSync('openclaw', ['models', 'auth', 'paste-token', '--provider', 'openrouter'], {
+                input: `${process.env.OPENROUTER_API_KEY}\n`,
+                stdio: ['pipe', 'inherit', 'inherit'],
+                shell: true
+            });
+            execSync('openclaw models auth order set openrouter:manual --provider openrouter --agent main', { stdio: 'inherit' });
+        }
+
         // Ensure free LLM models are selected
         execSync('openclaw models set "openrouter/meta-llama/llama-3.3-70b-instruct:free"', { stdio: 'inherit' });
         
