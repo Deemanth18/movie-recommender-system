@@ -64,13 +64,11 @@ What drew you in most — the visuals, the story, or the characters?
 
 ---
 
-## 📱 Supported Channels
+## 📱 Supported Channel
 
 | Channel | Status | How to Use |
 |---------|--------|------------|
 | **Telegram** | ✅ Active | Search for your bot on Telegram and start chatting |
-| **WhatsApp** | 🔜 Coming Soon | Will be added in a future update via OpenClaw's WhatsApp adapter |
-| **Terminal** | ✅ Active | Use `openclaw chat` for local testing |
 
 ---
 
@@ -79,7 +77,6 @@ What drew you in most — the visuals, the story, or the characters?
 - **🎭 Vibe Matching** — Analyzes mood, tone, themes, pacing, visual style, and emotional impact
 - **🧠 Memory** — Remembers your taste profile across conversations (stored in `MEMORY.md`)
 - **🍿 Evening Picks** — Proactively suggests a movie every evening at 7 PM via `HEARTBEAT.md`
-- **🖼️ Movie Posters** — Fetches poster images from TMDB API
 - **🌍 Multi-Language** — Recommends movies across all languages and cultures
 - **💬 Conversational** — Asks follow-up questions to refine your preferences
 - **🆓 100% Free** — Uses free LLM models via OpenRouter, free TMDB API, free Telegram Bot API
@@ -99,7 +96,7 @@ User's Phone (Telegram/WhatsApp)
         ├── HEARTBEAT.md → Proactive evening movie suggestions
         └── SKILL.md    → Movie recommendation logic
                 │
-                └── fetch_posters.py → TMDB API for poster images
+                └── fetch.py → TMDB API for images
 ```
 
 **OpenClaw 5-Layer Stack:**
@@ -110,7 +107,7 @@ User's Phone (Telegram/WhatsApp)
 | 2 | Channel Adapter | OpenClaw built-in adapters |
 | 3 | Gateway | OpenClaw Gateway (Node.js) |
 | 4 | Pi Engine | LLM reasoning (free via OpenRouter) |
-| 5 | Skill Execution | `movie-recommender` skill + TMDB poster script |
+| 5 | Skill Execution | `movie-recommender` skill + TMDB script |
 
 ---
 
@@ -231,8 +228,8 @@ movie-recommender-system/
 | LLM (Primary) | Meta Llama 3.3 70B via [OpenRouter](https://openrouter.ai) | Free |
 | LLM (Fallback) | Google Gemma 3 27B via OpenRouter | Free |
 | Messaging | Telegram Bot API | Free |
-| Movie Data & Posters | [TMDB API](https://themoviedb.org) | Free |
-| Poster Fetcher | Python + requests | Free |
+| Movie Data  | [TMDB API](https://themoviedb.org) | Free |
+| Fetcher | Python + requests | Free |
 | Runtime | Node.js ≥ 22 | Free |
 
 **Total cost: $0** 💸
@@ -263,11 +260,6 @@ It then finds movies that score similarly across these dimensions — not just m
 - [x] Proactive evening suggestions
 - [x] TMDB poster fetching
 - [x] Free LLM via OpenRouter
-- [ ] WhatsApp integration
-- [ ] Discord bot support
-- [ ] Watch party coordination
-- [ ] Streaming platform availability check
-- [ ] Group taste profile merging
 
 ---
 
@@ -278,8 +270,7 @@ It then finds movies that score similarly across these dimensions — not just m
 | **Hackathon** | Clash of the Claws (PRISM, SRI-B) |
 | **Theme** | Theme 2 — Daily Utility |
 | **Problem** | Finding the right movie is a daily struggle. Genre-based recommendations miss the point — CineMatch matches by vibes. |
-| **Team** | Akash S |
-| **Deadline** | May 8, 2026 |
+| **Team_name** | Galaxy Coders |
 
 ---
 
@@ -299,4 +290,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-**Made with 🎬 by [Akash S](https://github.com/akash-s-ksgd)**
+**Made with 🎬 by Galaxy Coders**
